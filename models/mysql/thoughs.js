@@ -2,7 +2,7 @@ import mysql from 'mysql2/promise'
 import { DEFAULT_CONFIG } from './mysqlConfig.js'
 
 const connectionString =  DEFAULT_CONFIG
-
+console.log(DEFAULT_CONFIG)
 const connection = await mysql.createConnection(connectionString)
 
 export class ToughtModel {
