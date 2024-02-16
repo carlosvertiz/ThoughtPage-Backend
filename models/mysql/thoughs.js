@@ -1,15 +1,25 @@
 import mysql from 'mysql2/promise'
+import { DB_HOST, DB_NAME, DB_USER, DB_PORT, DB_PASSWORD } from '../../config'
 
 const DEFAULT_CONFIG = {
-  host: 'localhost',
-  user: 'root',
-  port: 3306,
-  password: '115935',
-  database: 'thoughtsdb'
+  host: DB_HOST,
+  user: DB_USER,
+  port: DB_PORT,
+  password: DB_PASSWORD,
+  database: DB_NAME
 }
 const connectionString = process.env.DATABASE_URL ?? DEFAULT_CONFIG
-
 const connection = await mysql.createConnection(connectionString)
+await connection.query( `CREATE TABLE IF NOT EXISTS thoughts(
+  id INT NOT NULL AUTO_INCREMENT,
+  thought TEXT NOT NULL,
+  categories TEXT,
+  views INT default(1),
+  dates timestamp NOT NULL DEFAULT (NOW()), 
+  modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY(id));`
+ )
+
 
 export class ToughtModel {
 
