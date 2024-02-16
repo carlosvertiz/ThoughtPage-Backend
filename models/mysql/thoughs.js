@@ -1,9 +1,19 @@
 import mysql from 'mysql2/promise'
-import { DEFAULT_CONFIG } from './mysqlConfig.js'
+import { DB_HOST, DB_NAME, DB_USER, DB_PORT, DB_PASSWORD } from '../../config.js'
+
+export const DEFAULT_CONFIG = {
+  host: DB_HOST,
+  user: DB_USER,
+  port: DB_PORT,
+  password: DB_PASSWORD,
+  database: DB_NAME
+}
 
 const connectionString =  DEFAULT_CONFIG
+
 console.log(DEFAULT_CONFIG)
 console.log(DEFAULT_CONFIG.DB_HOST)
+
 const connection = await mysql.createConnection(connectionString)
 
 export class ToughtModel {
