@@ -45,3 +45,20 @@ Content-Type: application/json
 
 ### Delete
 DELETE http://localhost:1234/thoughts/1
+
+
+
+
+
+###### POST
+POST https://thoughtpage-backend-production.up.railway.app/thoughts
+Content-Type: application/json
+
+{
+  "thought": "soy asdsssel saa",
+  "categories": "n"
+}
+
+
+### Delete
+DELETE https://thoughtpage-backend-production.up.railway.app/thoughts/1
