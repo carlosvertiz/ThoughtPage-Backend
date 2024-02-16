@@ -1,0 +1,47 @@
+### GET
+GET http://localhost:1234/thoughts
+
+###### POST
+POST http://localhost:1234/thoughts
+Content-Type: application/json
+
+{
+  "thought": "soy asdsssel saa",
+  "categories": "n"
+}
+
+### GET filtrado
+GET http://localhost:1234/thoughts?num=10
+
+### GET filtrado
+GET http://localhost:1234/thoughts?categories=n
+
+
+
+### GET filtrado
+GET http://localhost:1234/thoughts?categories=n&views=1
+
+
+### GET PAGINATION
+GET http://localhost:1234/thoughts?categories=&views=1&quantity=3&page=4
+
+### edit 
+PATCH  http://localhost:1234/thoughts/1
+Content-Type: application/json
+
+{
+  "thought": "soy",
+  "categories": "s"
+}
+
+### edit 
+PATCH  http://localhost:1234/thoughts/1
+Content-Type: application/json
+
+{
+  "views": 1
+}
+
+
+### Delete
+DELETE http://localhost:1234/thoughts/1
