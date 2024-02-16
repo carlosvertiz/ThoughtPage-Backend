@@ -3,6 +3,7 @@ import { DEFAULT_CONFIG } from './mysqlConfig.js'
 
 const connectionString =  DEFAULT_CONFIG
 console.log(DEFAULT_CONFIG)
+console.log(process.env.DB_HOST)
 const connection = await mysql.createConnection(connectionString)
 
 export class ToughtModel {
