@@ -1,3 +1,6 @@
+import { config } from "dotenv";
+config();
+
 import { DB_HOST, DB_NAME, DB_USER, DB_PORT, DB_PASSWORD } from '../../config.js'
 
 export const DEFAULT_CONFIG = {
