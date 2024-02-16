@@ -11,9 +11,6 @@ export const DEFAULT_CONFIG = {
 
 const connectionString =  DEFAULT_CONFIG
 
-console.log(DEFAULT_CONFIG)
-console.log(DEFAULT_CONFIG.DB_HOST)
-
 const connection = await mysql.createConnection(connectionString)
 
 export class ToughtModel {
