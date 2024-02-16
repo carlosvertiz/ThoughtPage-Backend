@@ -15,7 +15,7 @@ export const createThoughtRouter = ({thoughtModel}) => {
       console.log(origin)
       const ACCEPTED_ORIGINS = [
         'http://localhost:5173',
-        'https://thoughtpage-backend-production.up.railway.app'
+        'https://thoughtnotebook.netlify.app/'
       ]
       if (ACCEPTED_ORIGINS.includes(origin)) {
         return callback(null, true)
