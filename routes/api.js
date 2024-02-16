@@ -14,7 +14,8 @@ export const createThoughtRouter = ({thoughtModel}) => {
     origin: (origin, callback) => {
       console.log(origin)
       const ACCEPTED_ORIGINS = [
-        'http://localhost:5173'
+        'http://localhost:5173',
+        'https://thoughtpage-backend-production.up.railway.app'
       ]
       if (ACCEPTED_ORIGINS.includes(origin)) {
         return callback(null, true)
