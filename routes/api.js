@@ -12,7 +12,6 @@ export const createThoughtRouter = ({thoughtModel}) => {
 
   thoughtRouter.use(cors({
     origin: (origin, callback) => {
-      console.log(origin)
       const ACCEPTED_ORIGINS = [
         'http://localhost:5173',
         'https://thoughtnotebook.netlify.app'

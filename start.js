@@ -13,8 +13,6 @@ export const createApp = ({thoughtModel}) => {
 
   
 
-  const server = app.listen(PORT, () => {
-    console.log(`Server listening on port http://localhost:${server.address().port}`);
-  });
+  const server = app.listen(PORT);
 };
 
