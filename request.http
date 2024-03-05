@@ -62,3 +62,9 @@ Content-Type: application/json
 
 ### Delete
 DELETE https://thoughtpage-backend-production.up.railway.app/thoughts/1
+
+
+
+
+###### GET
+Get https://thoughtpage-backend-production.up.railway.app/thoughts
